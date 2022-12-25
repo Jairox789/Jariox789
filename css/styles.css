@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;500;900&display=swap');
+
+:root{
+    --tittle-letter:#FFFFFF;
+    --hospital-green:#ACD9B2;
+    --hover:#185ADB;
+    --border:#C7C7C7;
+    --sm:14px;
+    --md:16px;
+    --lg:18px;
+}
+body{
+    font-family: 'Hanken Grotesk', sans-serif;
+    margin: 0;
+}
+.logo{
+    width: 75px;
+    height: 8vh;
+}
+/*Styles from the navbar*/
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom:1px solid rgb(10, 25, 49);
+    align-content: center;
+    background:none;
+    width: 100%;
+    height: 8vh;
+    position: fixed;
+    z-index: 5;
+}
+nav .navbar-left{
+    display: flex;
+}
+nav .navbar-right{
+    display: flex;
+}
+.navbar-left ul, .navbar-right ul {
+    list-style: none;
+    padding: 0;
+    margin:0;
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+.navbar-left ul li{
+    margin:0 20px 0 20px;
+}
+.navbar-right ul li{
+    margin-right: 20px;
+}
+
+nav .navbar-left ul li a,nav .navbar-right ul li a{
+    text-decoration: none;
+    color:var(--tittle-letter);
+    padding: 8px;
+    border-radius: 8px;
+}
+nav .navbar-left ul li a:hover,nav .navbar-right ul li a:hover{
+    text-decoration: none;
+    color:var(--tittle-letter);
+    border-bottom: 1px solid var(--hover);
+    padding: 8px;
+    border-radius: 8px;
+}
+nav .navbar-right img{
+    margin: 8px 0 0 0;
+    width: 50px;
+    height: 50px;
+}
+/*Styles from the hero*/
+.hero{
+    position: relative;
+}
+.hero .info-container{
+    position: absolute;
+    top: 60%;
+    transform: translateY(-100%);
+    left: 15%;
+    width: 100vh;
+    display: flex;
+    color: rgb(255,255,255);
+    padding: 0 50px;
+    flex-direction: column;
+}
+.hero .info-container .info{
+    justify-content: center;
+}
+.hero .info-container .info h1:nth-child(1){
+    font-weight:normal ;
+    font-size: 80px;
+    margin:0;
+}
+.hero .info-container .info h1:nth-child(2){
+    font-weight: bold;
+    font-size: 90px;
+    margin:0;
+}
+.hero .info-container .info span{
+    font-weight: lighter;
+    font-size: 40px;
+    margin:0;
+}
+.hero .info-container button{
+    margin-top: 16px;
+    margin-right: 16px;
+    background:none;
+    border-radius: 15px;
+    border: 1px solid white;
+    color: var(--tittle-letter);
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    font-size: var(--md);
+    font-weight: bold;
+}
+.hero .image-container{
+    display: flex;
+}
+.image-container img{
+    width: 100%;
+    height: 100vh;
+}
+/*Styles from about*/
+.about{
+    background-color: rgb(10, 25, 49);
+}
