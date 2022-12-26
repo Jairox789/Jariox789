@@ -124,5 +124,44 @@ nav .navbar-right img{
 }
 /*Styles from about*/
 .about{
-    background-color: rgb(10, 25, 49);
+    background-color: #0e0f13;
+    width: 100%;
+    height: 100vh;
+    position: relative;
 }
+.about-image{
+    position: absolute;
+    right: 20%;
+    top:15%;
+}
+.about-image img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+.about .info-container{
+    background-color: #0e0f13;
+    width: 35%;
+    height: 89vh;
+    color: var(--tittle-letter);
+    position: absolute;
+    padding: 100px 0 0 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.about .info-container h1:nth-child(1){
+    display: inline-block;
+    margin-bottom: 0;
+    border-bottom: 1px solid #185ADB;
+}
+.about .info-container h1:nth-child(2){
+    margin-top:0;
+    margin-bottom: 80px;
+}
+.about .info-direction{
+    color: var(--tittle-letter);
+    display: flex;
+    flex-direction: column;
+}
+/*Style from Resume*/
