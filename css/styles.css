@@ -179,6 +179,7 @@ nav .navbar-right img{
 }
 /*Style from Resume*/
 .resume{
+    padding-top: 8vh;
     position: relative;
     border-top:1px solid var(--border) ;
     background-color: #0e0f13;
@@ -304,6 +305,7 @@ nav .navbar-right img{
 }
 /*Styles from the portfolio*/
 .portfolio{
+    padding-top: 8vh;
     background-color: #0e0f13;
     width: 100%;
     height: 100%;
@@ -383,4 +385,106 @@ nav .navbar-right img{
     width: 300px;
     height: 300px;
 }
-
+/*Styles from the contact*/
+.contact{
+    padding-top: 8vh;
+    background-color: #0e0f13;
+    width: 100%;
+    height: 92vh;
+    color: var(--tittle-letter);
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas:
+            "map contact";
+    justify-items: center;
+    border-top: 1px solid var(--border);
+}
+.contact .map{
+    grid-area: map;
+    display: flex;
+    flex-direction: column;
+}
+.contact .map h1{
+    font-weight:normal ;
+    font-size: 80px;
+    margin: 0;
+}
+.contact .map span{
+    margin: 16px 0;
+}
+.contact .form-contact {
+    grid-area: contact;
+}
+.contact .form-contact form{
+    display: flex;
+    flex-direction: column;
+}
+.contact .form-contact input{
+    background-color: gainsboro;
+    border: none;
+    border-radius: 8px;
+    height: 32px;
+    font-size: var(--md);
+    padding: 6px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+.contact .form-contact textarea{
+    background-color: gainsboro;
+    border: none;
+    border-radius: 8px;
+    font-size: var(--md);
+    padding: 6px;
+    height: 252px;
+    width: 556px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+.contact .form-contact .submit-button{
+    background-color: #4CAF50;;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    width: 100%;
+    height: 50px;
+    cursor:pointer;
+    font-size: var(--md);
+    font-weight: bold;
+}
+/*Styles from footer*/
+footer{
+    border-top: 1px solid var(--border);
+    background-color: #222831;
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer .logo{
+    margin: 24px 0;
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    display: flex;
+}
+footer ul{
+    list-style: none;
+    display: flex;
+}
+footer ul li{
+    margin-right: 16px;
+}
+footer ul li .github img{
+    padding: 8px;
+    background: rgb(67, 64, 64);
+}
+footer ul li .linkedin img{
+    padding: 8px;
+    background: rgba(10,102,194,255);
+}
+footer ul li .platzi img{
+    padding: 8px;
+    background: rgb(138,185,67,255);
+}
