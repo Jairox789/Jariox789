@@ -22,59 +22,65 @@ body{
 }
 /*Styles from the navbar*/
 nav{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    border-bottom:1px solid rgb(10, 25, 49);
-    align-content: center;
-    background:none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #24252a;
     width: 100%;
     height: 8vh;
     position: fixed;
     z-index: 5;
 }
-nav .navbar-left{
-    display: flex;
-}
-nav .navbar-right{
-    display: flex;
-}
-.navbar-left ul, .navbar-right ul {
-    list-style: none;
-    padding: 0;
-    margin:0;
-    display: flex;
-    align-items: center;
-    height: 60px;
-}
-.navbar-left ul li{
-    margin:0 20px 0 20px;
-}
-.navbar-right ul li{
-    margin-right: 20px;
-}
-
-nav .navbar-left ul li a,nav .navbar-right ul li a{
-    text-decoration: none;
-    color:var(--tittle-letter);
-    padding: 8px;
-    border-radius: 8px;
-}
-nav .navbar-left ul li a:hover,nav .navbar-right ul li a:hover{
-    text-decoration: none;
-    color:var(--tittle-letter);
-    border-bottom: 1px solid var(--hover);
-    padding: 8px;
-    border-radius: 8px;
-}
-nav .navbar-right img{
-    margin: 8px 0 0 0;
+nav .logo img{
+    margin: 0 100px;
     width: 50px;
     height: 50px;
+}
+nav ul{
+    padding: 0;
+    list-style: none;
+    float: right;
+    margin: 0 20px 0 0;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin:0 5px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: var(--tittle-letter);
+    font-size: 17px;
+    text-transform: uppercase;
+    padding: 7px 13px;
+    border-radius: 3px;
+}
+a.active,a:hover{
+    background: #1b9bff;
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color:white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+.checkbtn img{
+    width: 30px;
+    height: 30px;
+}
+#check{
+    display: none;
 }
 /*Styles from the hero*/
 .hero{
     position: relative;
+}
+.hero .image-mobile{
+    display: none;
 }
 .hero .info-container{
     position: absolute;
@@ -105,19 +111,10 @@ nav .navbar-right img{
     font-size: 40px;
     margin:0;
 }
-.hero .info-container button{
-    margin-top: 16px;
-    margin-right: 16px;
-    background:none;
-    border-radius: 15px;
-    border: 1px solid white;
-    color: var(--tittle-letter);
-    width: 150px;
-    height: 40px;
-    cursor: pointer;
-    font-size: var(--md);
-    font-weight: bold;
+.hero .info-container ul{
+    display: flex;
 }
+
 .hero .image-container{
     display: flex;
 }
@@ -293,7 +290,7 @@ nav .navbar-right img{
     align-items: center;
 }
 .education .schools img{
-    height: 250px;
+    height: 134px;
     width: 250px;
 }
 .education .schools ul li{
@@ -371,10 +368,21 @@ nav .navbar-right img{
 .portfolio .work2 .work2-info .link .github-link-work2:hover{
     border-bottom: 1px solid var(--hover);
 }
-.portfolio .work2 .work2-info .link img{
-    width: 50px;
-    height: 50px;
+.portfolio .work2 .work2-info .link .github-link-work2 img{
+    width: 25px;
+    height: 25px;
     margin: 0 50px;
+    border-radius: 5px;
+    padding: 8px;
+    background: rgb(67, 64, 64);
+}
+.portfolio .work2 .work2-info .link .link-work2 img{
+    width: 25px;
+    height: 25px;
+    margin: 0 50px;
+    border-radius: 5px;
+    padding: 8px;
+    background: rgba(128,224,220,255);
 }
 .portfolio .more{
     display: flex;
@@ -477,14 +485,124 @@ footer ul li{
     margin-right: 16px;
 }
 footer ul li .github img{
+    border-radius: 5px;
     padding: 8px;
     background: rgb(67, 64, 64);
 }
 footer ul li .linkedin img{
+    border-radius: 5px;
     padding: 8px;
     background: rgba(10,102,194,255);
 }
 footer ul li .platzi img{
+    border-radius: 5px;
     padding: 8px;
     background: rgb(138,185,67,255);
+}
+
+/*Responsive*/
+@media (max-width: 1510px){
+    /*Responsive about*/
+    .about .about-image img{
+        width: 450px;
+        height: 450px;
+    }
+}
+@media (max-width: 1234px){
+    /*Responsive about*/
+    .about .about-image img{
+        width: 350px;
+        height: 350px;
+    }
+    .about .info-container {
+        margin-right: -1px;
+    }
+    .about .about-grid{
+        width: 553px;
+        height: 100px;
+        padding: 15px;
+        margin-left: 36px;
+    }
+}
+@media (max-width: 1066px){
+    .about .about-image{
+        display: grid;
+        grid-area: image;
+        align-content: space-between;
+    }
+    .about .about-image img{
+        margin-top: 180px;
+        width: 200px;
+        height: 200px;
+    }
+}
+@media (max-width: 952px){
+    /*Responsive navbar*/
+    nav img{
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+    /*Responsive hero*/
+    .hero .info-container{
+        top: 60%;
+        left: 10%;
+    }
+    /*Responsive about*/
+}
+@media (max-width: 858px){
+    /*Responsive navbar*/
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top:8%;
+        left: -200%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+    }
+    a:hover,a.active{
+        background: none;
+        color:#0082e6;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+    /*Responsive hero*/
+}
+@media (max-width: 640px){
+    /*Responsive hero*/
+    .hero .image-desktop{
+        display: none;
+    }
+    .hero .image-mobile{
+        display: block;
+    }
+    .hero .info-container{
+        top: 50%;
+        left: 5%;
+    }
+    .hero .info-container .info h1:nth-child(1){
+        font-weight:normal ;
+        font-size: 60px;
+        margin:0;
+    }
+    .hero .info-container .info h1:nth-child(2){
+        font-weight: bold;
+        font-size: 70px;
+        margin:0;
+    }
+    .hero .info-container .info span{
+        font-weight: lighter;
+        font-size: 20px;
+        margin:0;
+    }
 }
