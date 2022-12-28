@@ -135,13 +135,16 @@ a.active,a:hover{
             "image about1"
             "image about2";
     place-content: center;
+    text-align: justify;
 }
 .about .about-image{
     display: grid;
     grid-area: image;
-    place-content: center;
+    justify-content: center;
+    align-content: space-between;
 }
 .about .about-image img{
+    margin-top: 164px;
     width: 600px;
     height: 600px;
     border-radius: 10px;
@@ -150,7 +153,7 @@ a.active,a:hover{
     grid-area: about1;
     width: 634px;
     color: var(--tittle-letter);
-    padding: 132px 0 0px 42px;
+    padding: 132px 0 0 42px;
 }
 .about .about-grid{
     grid-area: about2;
@@ -186,12 +189,14 @@ a.active,a:hover{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
-            "skills education";
+            "education skills";
     place-content: center;
 }
 .resume .skills{
+    display: flex;
     grid-area: skills;
-    margin-left: 44px;
+    flex-direction: column;
+    align-items: center;
 }
 .resume .skills h1{
     display: inline-block;
@@ -503,7 +508,41 @@ footer ul li .platzi img{
 /*Responsive*/
 @media (max-width: 1510px){
     /*Responsive about*/
+    .about .about-image {
+        display: grid;
+        grid-area: image;
+        justify-content: center;
+        align-content: space-between;
+    }
     .about .about-image img{
+        margin-top: 164px;
+        width: 450px;
+        height: 450px;
+    }
+    /*Responsive portfolio*/
+    .portfolio .work1 .work1-info ul li {
+        text-align: justify;
+        width: 536px;
+    }
+    .portfolio .work2 .work2-info ul li {
+        text-align: justify;
+        width: 536px;
+    }
+    .portfolio .works .work1-info ul li img {
+        width: 470px;
+        height: 235px;
+    }
+    .portfolio .works .work2-info ul li img {
+        width: 470px;
+        height: 235px;
+    }
+}
+@media (max-width: 1320px){
+    /*Responsive contact*/
+    .contact .map span{
+        width: 450px;
+    }
+    .contact .map iframe{
         width: 450px;
         height: 450px;
     }
@@ -523,17 +562,55 @@ footer ul li .platzi img{
         padding: 15px;
         margin-left: 36px;
     }
+    /*Responsive portfolio*/
+    .portfolio .works {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "work1" " work2";
+        justify-items: center;
+    }
+}
+@media (max-width: 1180px){
+    /*Responsive resume*/
+    .skills .gif img{
+        width: 254px;
+    }
+}
+@media (max-width: 1050px){
+    .resume {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+        "education"
+        "skills";
+    }
 }
 @media (max-width: 1066px){
-    .about .about-image{
-        display: grid;
-        grid-area: image;
-        align-content: space-between;
+    /*Responsive about*/
+    .about{
+        grid-template-columns: auto;
+        grid-template-rows: repeat(3,1fr);
+        grid-template-areas:
+        "image"
+        "about1"
+        "about2";
     }
-    .about .about-image img{
-        margin-top: 180px;
-        width: 200px;
-        height: 200px;
+    .about .about-image img {
+        margin-top: 100px;
+        width: 300px;
+        height: 300px;
+    }
+    .about .info-container {
+        grid-area: about1;
+        color: var(--tittle-letter);
+        padding: 0;
+    }
+    .about .about-grid {
+        width: 553px;
+        height: 100px;
+        padding: 15px;
+        margin: 20px 0 0 0;
     }
 }
 @media (max-width: 952px){
@@ -551,12 +628,12 @@ footer ul li .platzi img{
     }
     /*Responsive about*/
 }
-@media (max-width: 858px){
+@media (max-width: 768px){
     /*Responsive navbar*/
     .checkbtn{
         display: block;
     }
-    ul{
+   nav ul{
         position: fixed;
         width: 100%;
         height: 100vh;
@@ -577,15 +654,32 @@ footer ul li .platzi img{
         left:0;
     }
     /*Responsive hero*/
-}
-@media (max-width: 640px){
-    /*Responsive hero*/
     .hero .image-desktop{
         display: none;
     }
     .hero .image-mobile{
         display: block;
     }
+    /*Responsive resume*/
+    .education img{
+        height: 175px;
+        width: 250px;
+    }
+    .education .diplomas-certificates .horizontal img{
+        height: 250px;
+        width: 175px;
+    }
+    .education .diplomas-certificates ul li {
+        text-align: justify;
+        width: 264px;
+    }
+    .education .schools ul li {
+        width: 300px;
+        text-align: justify;
+    }
+}
+@media (max-width: 680px){
+    /*Responsive hero*/
     .hero .info-container{
         top: 50%;
         left: 5%;
@@ -604,5 +698,49 @@ footer ul li .platzi img{
         font-weight: lighter;
         font-size: 20px;
         margin:0;
+    }
+    /*Responsive about*/
+    .about{
+        height: 100%;
+    }
+    .about .about-image img{
+        margin-top: 180px;
+    }
+    .about .info-container .info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .about .info-container .info span{
+        width: 350px;
+        display: inline-block;
+    }
+    .about .about-grid {
+        grid-template-columns:auto;
+        width: 264px;
+        height: 212px;
+        margin-left: 156px;
+    }
+    /*Responsive portfolio*/
+    .portfolio h1 {
+        font-size: 18px;
+    }
+    .portfolio .more img {
+        width: 200px;
+        height: 200px;
+    }
+    .portfolio .work1 .work1-info ul li {
+        width: 268px;
+    }
+    .portfolio .work2 .work2-info ul li {
+        width: 268px;
+    }
+    .portfolio .works .work1-info ul li img {
+        width: 235px;
+        height: 118px;
+    }
+    .portfolio .works .work2-info ul li img {
+        width: 235px;
+        height: 118px;
     }
 }
