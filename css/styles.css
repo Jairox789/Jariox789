@@ -87,7 +87,6 @@ a.active,a:hover{
     top: 60%;
     transform: translateY(-100%);
     left: 15%;
-    width: 100vh;
     display: flex;
     color: rgb(255,255,255);
     padding: 0 50px;
@@ -546,6 +545,13 @@ footer ul li .platzi img{
         width: 450px;
         height: 450px;
     }
+    .contact .form-contact form {
+        width: 412px;
+    }
+    .contact .form-contact textarea {
+        height: 224px;
+        width: 400px;
+    }
 }
 @media (max-width: 1234px){
     /*Responsive about*/
@@ -615,9 +621,6 @@ footer ul li .platzi img{
 }
 @media (max-width: 952px){
     /*Responsive navbar*/
-    nav img{
-        padding-left: 50px;
-    }
     nav ul li a{
         font-size: 16px;
     }
@@ -626,7 +629,19 @@ footer ul li .platzi img{
         top: 60%;
         left: 10%;
     }
-    /*Responsive about*/
+    /*Responsive contact*/
+    .contact{
+        height: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "map"
+        "contact";
+        padding-bottom: 44px;
+    }
+    .contact .map {
+        align-items: center;
+    }
+
 }
 @media (max-width: 768px){
     /*Responsive navbar*/
@@ -742,5 +757,32 @@ footer ul li .platzi img{
     .portfolio .works .work2-info ul li img {
         width: 235px;
         height: 118px;
+    }
+    /*Responsive contact*/
+    .contact .map span{
+        width: 300px;
+    }
+    .contact .map h1{
+        font-size: 60px;
+    }
+    .contact .map iframe{
+        width: 330px;
+        height: 300px;
+    }
+    .contact .form-contact form {
+        width: 300px;
+    }
+    .contact .form-contact textarea {
+        height: 224px;
+        width: 300px;
+    }
+    /*Responsive footer*/
+    footer .logo {
+        width: 100px;
+        height: 100px;
+    }
+    footer span{
+        font-size: 15px;
+        margin-bottom: 28px;
     }
 }
