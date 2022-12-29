@@ -306,7 +306,7 @@ a.active,a:hover{
     align-items: center;
 }
 .education .schools img{
-    height: 134px;
+    height: auto;
     width: 250px;
 }
 .education .schools ul li{
@@ -325,6 +325,7 @@ a.active,a:hover{
     color: var(--tittle-letter);
     display: grid;
     border-top: 1px solid var(--border);
+    font-size: 18px;
 }
 .portfolio h1{
     display: flex;
@@ -655,6 +656,9 @@ footer ul li .platzi img{
         grid-template-areas: "work1" " work2";
         justify-items: center;
     }
+    .portfolio ul{
+        padding: 0;
+    }
 }
 @media (max-width: 1180px){
     /*Responsive resume*/
@@ -663,6 +667,7 @@ footer ul li .platzi img{
     }
 }
 @media (max-width: 1050px){
+    /*Responsive resume*/
     .resume {
         grid-template-columns: 1fr;
         grid-template-rows:1fr;
@@ -671,6 +676,22 @@ footer ul li .platzi img{
         "education"
         "skills";
     }
+    .resume .skills h1 {
+        margin-left: 0;
+    }
+    .resume .skills .skill-software h1{
+        margin-left: 0;
+    }
+    .resume .skills .skill-software ul{
+        padding: 0;
+    }
+    .resume .education ul{
+        padding: 0;
+    }
+
+    /*Responsive portfolio*/
+
+
 }
 @media (max-width: 1066px){
     /*Responsive about*/
@@ -774,6 +795,16 @@ footer ul li .platzi img{
     }
 }
 @media (max-width: 680px){
+    /*Responsive navbar*/
+    nav{
+        height: 10vh;
+    }
+    nav ul{
+        top: 10%;
+    }
+    .logo{
+        height: 10vh;
+    }
     /*Responsive hero*/
     .hero .info-container{
         top: 50%;
@@ -851,6 +882,9 @@ footer ul li .platzi img{
     .portfolio .works .work1-info ul li img {
         width: 235px;
         height: 118px;
+    }
+    .portfolio .work1 ul:nth-child(2n){
+        padding-left: 64px;
     }
     .portfolio .works .work2-info ul li img {
         width: 235px;
